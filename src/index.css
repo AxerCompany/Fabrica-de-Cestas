@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Custom Palette */
+  --color-rosa-acolhedor: #E76F8A;
+  --color-creme-claro: #FFF7F3;
+  --color-laranja-suave: #F4A261;
+  --color-marrom-suave: #5C3D2E;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-marrom-suave antialiased bg-creme-claro;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-marrom-suave;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
