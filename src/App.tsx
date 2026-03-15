@@ -161,11 +161,11 @@ const AppTechnology = () => {
         </div>
       </div>
       
-      <div className="max-w-6xl mx-auto px-6 relative group">
+      <div className="max-w-[300px] md:max-w-[320px] mx-auto relative group px-4">
         {/* Navigation Arrows */}
         <button 
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm shadow-sm flex items-center justify-center text-marrom-suave hover:text-rosa-acolhedor transition-all duration-300 border border-marrom-suave/5 opacity-0 group-hover:opacity-100 hidden md:flex"
+          className="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-marrom-suave hover:text-rosa-acolhedor transition-all duration-300 border border-marrom-suave/5"
           aria-label="Anterior"
         >
           <ChevronLeft className="w-5 h-5" />
@@ -173,7 +173,7 @@ const AppTechnology = () => {
         
         <button 
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm shadow-sm flex items-center justify-center text-marrom-suave hover:bg-rosa-acolhedor hover:text-white transition-all duration-300 border border-marrom-suave/5 opacity-0 group-hover:opacity-100 hidden md:flex"
+          className="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-marrom-suave hover:bg-rosa-acolhedor hover:text-white transition-all duration-300 border border-marrom-suave/5"
           aria-label="Próximo"
         >
           <ChevronRight className="w-5 h-5" />
@@ -181,13 +181,29 @@ const AppTechnology = () => {
 
         <div 
           ref={scrollRef}
-          className="flex gap-4 md:gap-6 overflow-x-auto pb-4 md:pb-12 scrollbar-hide snap-x snap-mandatory"
+          className="flex overflow-x-auto pb-4 md:pb-12 scrollbar-hide snap-x snap-mandatory"
         >
-          {[1, 2, 3, 4, 5].map((i) => (
-            <div key={i} className="min-w-[240px] md:min-w-[320px] aspect-[9/16] bg-creme-claro rounded-2xl overflow-hidden border border-marrom-suave/5 snap-center shadow-sm">
+          {[
+            "https://i.postimg.cc/TP4cZD2B/Whats-App-Image-2026-03-14-at-22-26-20.webp",
+            "https://i.postimg.cc/8C0bq6k3/Whats-App-Image-2026-03-14-at-22-26-21.webp",
+            "https://i.postimg.cc/5tRmZC9T/Whats-App-Image-2026-03-14-at-22-26-22.webp",
+            "https://i.postimg.cc/R0DTjHCb/Whats-App-Image-2026-03-14-at-22-26-22_(1).webp",
+            "https://i.postimg.cc/pd6BgFVG/Whats-App-Image-2026-03-14-at-22-26-22_(2).webp",
+            "https://i.postimg.cc/s2NJthfH/Whats-App-Image-2026-03-14-at-22-26-23.webp",
+            "https://i.postimg.cc/KYH5dMcH/Whats-App-Image-2026-03-14-at-22-26-21_(1).webp",
+            "https://i.postimg.cc/rpP9vryj/Whats-App-Image-2026-03-14-at-22-26-21_(2).webp",
+            "https://i.postimg.cc/q75G93Bj/Whats-App-Image-2026-03-14-at-22-26-21_(3).webp",
+            "https://i.postimg.cc/LsbVr14x/Whats-App-Image-2026-03-14-at-22-26-21_(4).webp",
+            "https://i.postimg.cc/XvzgTCNx/Whats-App-Image-2026-03-14-at-22-26-21_(5).webp",
+            "https://i.postimg.cc/tgMzLxRz/Whats-App-Image-2026-03-14-at-22-26-21_(6).webp",
+            "https://i.postimg.cc/vmNvpV8L/Whats-App-Image-2026-03-14-at-22-26-22_(3).webp",
+            "https://i.postimg.cc/PqRMBwfQ/Whats-App-Image-2026-03-14-at-22-26-22_(4).webp",
+            "https://i.postimg.cc/N0zxWHG4/Whats-App-Image-2026-03-14-at-22-26-22_(5).webp"
+          ].map((url, i) => (
+            <div key={i} className="w-full flex-shrink-0 aspect-[9/16] bg-creme-claro rounded-2xl overflow-hidden border border-marrom-suave/5 snap-center shadow-sm">
               <img 
-                src={`https://picsum.photos/seed/app-screen-${i}/720/1280`} 
-                alt={`App Screen ${i}`} 
+                src={url} 
+                alt={`App Screen ${i + 1}`} 
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -325,7 +341,7 @@ const Results = () => {
           {/* Navigation Arrows */}
           <button 
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm shadow-sm flex items-center justify-center text-marrom-suave hover:bg-rosa-acolhedor hover:text-white transition-all duration-300 border border-marrom-suave/5 opacity-0 group-hover:opacity-100 hidden md:flex"
+            className="absolute -left-4 md:left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-marrom-suave hover:bg-rosa-acolhedor hover:text-white transition-all duration-300 border border-marrom-suave/5"
             aria-label="Anterior"
           >
             <ChevronLeft className="w-5 h-5" />
@@ -333,13 +349,13 @@ const Results = () => {
           
           <button 
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm shadow-sm flex items-center justify-center text-marrom-suave hover:bg-rosa-acolhedor hover:text-white transition-all duration-300 border border-marrom-suave/5 opacity-0 group-hover:opacity-100 hidden md:flex"
+            className="absolute -right-4 md:right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-marrom-suave hover:bg-rosa-acolhedor hover:text-white transition-all duration-300 border border-marrom-suave/5"
             aria-label="Próximo"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
 
-          <div 
+            <div 
             ref={scrollRef}
             className="flex gap-4 md:gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory"
           >
@@ -419,7 +435,7 @@ const WhatYouGet = () => (
                   Ter as cestas prontas é só o começo. Aqui você aprende como fazer as pessoas quererem comprar.
                 </p>
 
-                <div className="grid sm:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
+                <div className="flex flex-col gap-4 mb-8 max-w-md mx-auto">
                   {[
                     "Divulgação em redes sociais, Instagram, WhatsApp, Facebook",
                     "Posts que despertam interesse",
@@ -427,7 +443,7 @@ const WhatYouGet = () => (
                     "Vender sem parecer insistente",
                     "Transformar clientes em novos pedidos"
                   ].map((item, i) => (
-                    <div key={i} className="flex items-center justify-center sm:justify-start gap-3">
+                    <div key={i} className="flex items-center gap-3">
                       <div className="w-5 h-5 rounded-full bg-rosa-acolhedor/10 flex items-center justify-center shrink-0">
                         <Check className="w-3 h-3 text-rosa-acolhedor" />
                       </div>
@@ -463,7 +479,7 @@ const WhatYouGet = () => (
                 Um guia simples para quem quer começar mesmo sem experiência, direto ao ponto.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
+              <div className="flex flex-col gap-4 mb-8 max-w-md mx-auto">
                 {[
                   "Quantas cestas fazer no início",
                   "Montagem da primeira cesta",
@@ -471,7 +487,7 @@ const WhatYouGet = () => (
                   "Fotos bonitas com o celular",
                   "Como evitar erros de iniciantes"
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center justify-center sm:justify-start gap-3">
+                  <div key={i} className="flex items-center gap-3">
                     <div className="w-5 h-5 rounded-full bg-marrom-suave/5 flex items-center justify-center shrink-0">
                       <Check className="w-3 h-3 text-marrom-suave/40" />
                     </div>
