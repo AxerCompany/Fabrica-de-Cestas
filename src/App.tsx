@@ -204,7 +204,7 @@ const AppTechnology = () => {
               <img 
                 src={url} 
                 alt={`App Screen ${i + 1}`} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"
               />
             </div>
@@ -376,7 +376,7 @@ const Results = () => {
                 <img 
                   src={url} 
                   alt={`Cesta Exemplo ${i + 1}`} 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
               </div>
