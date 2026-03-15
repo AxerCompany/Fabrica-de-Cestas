@@ -306,34 +306,48 @@ const Testimonials = () => (
           { 
             name: "CARLA SOUZA", 
             role: "Empreendedora",
+            image: "https://i.postimg.cc/dVXGbZmW/image_13_229x300_(1).webp",
             text: "Eu sempre quis vender cestas, mas não sabia por onde começar. O aplicativo me mostrou ideias prontas e até quanto cobrar. Consegui fazer minhas primeiras vendas muito mais rápido do que imaginava." 
           },
           { 
             name: "RENATA OLIVEIRA", 
             role: "Vendedora de Cestas",
+            image: "https://i.postimg.cc/fRFYGSj8/image_14_300x300_(1).webp",
             text: "O que mais gostei foi ver o lucro antes de montar a cesta. Isso me deu segurança para começar. Fiz minha primeira venda na mesma semana que comecei a usar." 
           },
           { 
             name: "ANA PAULA LIMA", 
             role: "Mãe e Empreendedora",
+            image: "https://i.postimg.cc/CKqbSMmc/image_15_300x300_(1)_(1).webp",
             text: "Eu tinha medo de investir e não vender. O app me ajudou com ideias de cestas e textos para divulgar. Hoje já recebo pedidos pelo WhatsApp." 
           },
           { 
             name: "JULIANA FERREIRA", 
             role: "Empreendedora",
+            image: "https://i.postimg.cc/YSWQM2bb/image_16_281x300_(1)_(1).webp",
             text: "Para quem está começando do zero é perfeito. O aplicativo mostra o que colocar na cesta, quanto cobrar e como divulgar. Ficou muito mais fácil começar." 
           },
         ].map((t, i) => (
-          <div key={i} className="p-8 bg-white rounded-2xl border border-marrom-suave/5 shadow-sm">
+          <div key={i} className="p-8 bg-white rounded-2xl border border-marrom-suave/5 shadow-sm hover:shadow-md transition-shadow duration-300">
             <div className="flex gap-1 mb-6">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-rosa-acolhedor text-rosa-acolhedor" />
               ))}
             </div>
             <p className="text-marrom-suave/80 text-sm leading-relaxed mb-8 italic">"{t.text}"</p>
-            <div>
-              <p className="font-bold text-marrom-suave text-xs tracking-wider mb-1 uppercase">{t.name}</p>
-              <p className="text-rosa-acolhedor text-[10px] font-bold uppercase tracking-widest">{t.role}</p>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-rosa-acolhedor/20 shrink-0">
+                <img 
+                  src={t.image} 
+                  alt={t.name} 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              <div>
+                <p className="font-bold text-marrom-suave text-xs tracking-wider mb-1 uppercase">{t.name}</p>
+                <p className="text-rosa-acolhedor text-[10px] font-bold uppercase tracking-widest">{t.role}</p>
+              </div>
             </div>
           </div>
         ))}
