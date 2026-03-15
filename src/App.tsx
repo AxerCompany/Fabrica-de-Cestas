@@ -48,45 +48,81 @@ const Navbar = () => (
   </nav>
 );
 
-const Hero = () => (
-  <section className="pt-20 md:pt-32 pb-16 md:pb-20 bg-creme-claro">
-    <div className="max-w-4xl mx-auto px-6 text-center">
-      <motion.h1 
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-xl md:text-5xl font-bold leading-tight md:leading-[1.15] tracking-tight mb-6 md:mb-8 text-marrom-suave"
-      >
-        Ganhe até <span className="text-rosa-acolhedor">R$ 1.000 por semana</span> vendendo cestas de café da manhã e presente — mesmo começando do zero
-      </motion.h1>
-      
-      <motion.p 
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="text-marrom-suave/80 text-sm md:text-lg font-bold max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
-      >
-        Assista ao vídeo abaixo e descubra como o aplicativo mostra quais cestas montar, quanto cobrar e quanto você pode lucrar.
-      </motion.p>
+const Hero = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
 
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-        className="relative aspect-[9/16] max-w-[320px] mx-auto bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-marrom-suave/5"
-      >
-        <iframe
-          src="https://player.vimeo.com/video/1173769301?h=0&badge=0&autopause=0&player_id=0&app_id=58479"
-          className="absolute inset-0 w-full h-full"
-          allow="autoplay; fullscreen; picture-in-picture"
-          title="Mini VSL"
-        ></iframe>
-      </motion.div>
-    </div>
-  </section>
-);
+  return (
+    <section className="pt-20 md:pt-32 pb-8 md:pb-10 bg-creme-claro">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="inline-block bg-rosa-acolhedor/10 text-rosa-acolhedor px-6 py-2 rounded-2xl text-xs md:text-sm font-bold uppercase tracking-widest mb-6"
+        >
+          OPORTUNIDADE ÚNICA DE<br />RENDA EXTRA
+        </motion.div>
+        <motion.h1 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="text-xl md:text-5xl font-bold leading-tight md:leading-[1.15] tracking-tight mb-6 md:mb-8 text-marrom-suave"
+        >
+          Ganhe até <span className="text-rosa-acolhedor">R$ 1.000 por semana</span> vendendo cestas de café da manhã e presente — mesmo começando do zero
+        </motion.h1>
+        
+        <motion.p 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="text-marrom-suave/80 text-sm md:text-lg font-bold max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
+        >
+          Assista ao vídeo abaixo e descubra como o aplicativo mostra quais cestas montar, quanto cobrar e quanto você pode lucrar.
+        </motion.p>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="relative aspect-[9/16] max-w-[320px] mx-auto bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-marrom-suave/5 group cursor-pointer"
+          onClick={() => setIsPlaying(true)}
+        >
+          {!isPlaying ? (
+            <>
+              <img 
+                src="https://i.postimg.cc/TP4cZD2B/Whats_App_Image_2026_03_14_at_22_26_20.webp" 
+                alt="Thumbnail do Vídeo" 
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                referrerPolicy="no-referrer"
+              />
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+                <div className="w-16 h-16 bg-white/90 backdrop-blur-md text-marrom-suave rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <Play className="fill-current w-6 h-6 ml-1" />
+                </div>
+                <motion.div
+                  animate={{ scale: [1, 1.05, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="bg-rosa-acolhedor text-white px-4 py-2 rounded-full text-sm font-bold shadow-md uppercase tracking-wider"
+                >
+                  Clique para assistir
+                </motion.div>
+              </div>
+            </>
+          ) : (
+            <iframe
+              src="https://player.vimeo.com/video/1173769301?h=0&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1"
+              className="absolute inset-0 w-full h-full"
+              allow="autoplay; fullscreen; picture-in-picture"
+              title="Mini VSL"
+            ></iframe>
+          )}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 const HowItWorks = () => (
-  <section className="py-24 bg-creme-claro">
+  <section className="pt-8 pb-24 bg-creme-claro">
     <div className="max-w-6xl mx-auto px-6">
       <div className="mb-16 text-center">
         <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-4 text-marrom-suave">Comece a vender cestas em 3 passos simples</h2>
@@ -114,8 +150,8 @@ const HowItWorks = () => (
             icon: ArrowUpRight 
           },
         ].map((item, i) => (
-          <div key={i} className="group text-center">
-            <div className="w-16 h-16 bg-marrom-suave/5 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-rosa-acolhedor/10 transition-colors">
+          <div key={i} className="group p-8 bg-white rounded-3xl border border-marrom-suave/5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 text-center">
+            <div className="w-16 h-16 bg-marrom-suave/5 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-rosa-acolhedor/10 transition-colors">
               <item.icon className="w-6 h-6 text-marrom-suave group-hover:text-rosa-acolhedor transition-colors" />
             </div>
             <h3 className="text-sm font-bold uppercase tracking-wider mb-3 text-marrom-suave">{item.title}</h3>
@@ -238,9 +274,9 @@ const AppTechnology = () => {
           ].map((f, i) => (
             <div 
               key={i} 
-              className={`p-8 bg-creme-claro/30 rounded-3xl border border-marrom-suave/5 shadow-sm hover:shadow-md transition-shadow duration-300 ${i === 3 || i === 4 ? 'lg:col-span-1' : ''}`}
+              className={`p-8 bg-white rounded-3xl border border-marrom-suave/5 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 ${i === 3 || i === 4 ? 'lg:col-span-1' : ''}`}
             >
-              <div className="w-12 h-12 bg-rosa-acolhedor/10 rounded-2xl flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-rosa-acolhedor/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <f.icon className="w-6 h-6 text-rosa-acolhedor" />
               </div>
               <h4 className="font-bold text-marrom-suave text-lg mb-3 leading-tight">{f.title}</h4>
@@ -410,7 +446,7 @@ const WhatYouGet = () => (
         {/* Bonus 1 - Super Bonus */}
         <div className="group relative">
           <div className="absolute -inset-1 bg-gradient-to-r from-rosa-acolhedor to-laranja-suave rounded-[2.5rem] blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200" />
-          <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-marrom-suave/5 shadow-xl">
+          <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-marrom-suave/5 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500">
             <div className="flex flex-col items-center text-center gap-8">
               <div className="flex-1 w-full">
                 <div className="flex items-center justify-center gap-3 mb-6">
@@ -457,7 +493,7 @@ const WhatYouGet = () => (
         </div>
 
         {/* Bonus 2 */}
-        <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-marrom-suave/5 shadow-lg">
+        <div className="group relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-marrom-suave/5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
           <div className="flex flex-col items-center text-center gap-8">
             <div className="flex-1 w-full">
               <div className="flex items-center justify-center gap-3 mb-6">
@@ -534,8 +570,10 @@ const Pricing = () => {
           <p className="text-laranja-suave text-xs font-bold tracking-widest uppercase">ACESSO TOTAL + MOLDES + BÔNUS</p>
         </div>
 
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8 backdrop-blur-sm">
-          <div className="mb-8">
+        <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 mb-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-rosa-acolhedor/5">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-rosa-acolhedor/20 to-laranja-suave/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+          <div className="relative">
+            <div className="mb-8">
             <p className="text-[10px] font-black tracking-[0.3em] uppercase text-rosa-acolhedor mb-4 flex items-center justify-center gap-2">
               <Clock className="w-3 h-3" /> OFERTA EXPIRA EM: {formatTime(timeLeft)}
             </p>
@@ -596,6 +634,7 @@ const Pricing = () => {
           <p className="text-[9px] font-bold uppercase tracking-[0.2em] mt-4 text-white/40">
             PIX • CARTÃO • BOLETO
           </p>
+          </div>
         </div>
 
         <div className="flex justify-center gap-6 opacity-30 grayscale invert">
