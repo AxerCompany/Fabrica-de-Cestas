@@ -63,7 +63,7 @@ const Hero = () => (
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="text-marrom-suave/50 text-sm md:text-lg font-normal max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
+        className="text-marrom-suave/80 text-sm md:text-lg font-bold max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
       >
         Assista ao vídeo abaixo e descubra como o aplicativo mostra quais cestas montar, quanto cobrar e quanto você pode lucrar.
       </motion.p>
@@ -72,19 +72,14 @@ const Hero = () => (
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="relative aspect-video max-w-3xl mx-auto bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-marrom-suave/5 group"
+        className="relative aspect-[9/16] max-w-[320px] mx-auto bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-marrom-suave/5"
       >
-        <img 
-          src="https://picsum.photos/seed/artisanal-basket/1280/720" 
-          alt="Vídeo de Vendas" 
-          className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
-          referrerPolicy="no-referrer"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-12 h-12 md:w-16 md:h-16 bg-white/90 backdrop-blur-md text-marrom-suave rounded-full flex items-center justify-center shadow-sm hover:scale-105 transition-transform cursor-pointer">
-            <Play className="fill-current w-5 h-5 md:w-6 md:h-6 ml-1" />
-          </div>
-        </div>
+        <iframe
+          src="https://player.vimeo.com/video/1173769301?h=0&badge=0&autopause=0&player_id=0&app_id=58479"
+          className="absolute inset-0 w-full h-full"
+          allow="autoplay; fullscreen; picture-in-picture"
+          title="Mini VSL"
+        ></iframe>
       </motion.div>
     </div>
   </section>
