@@ -49,40 +49,40 @@ const Navbar = () => (
 );
 
 const Hero = () => (
-  <section className="pt-24 pb-12 bg-creme-claro">
-    <div className="max-w-3xl mx-auto px-6 text-center">
+  <section className="pt-20 md:pt-32 pb-16 md:pb-20 bg-creme-claro">
+    <div className="max-w-4xl mx-auto px-6 text-center">
       <motion.h1 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="text-2xl md:text-4xl font-bold leading-tight tracking-tight mb-6 text-marrom-suave"
+        className="text-xl md:text-5xl font-bold leading-tight md:leading-[1.15] tracking-tight mb-6 md:mb-8 text-marrom-suave"
       >
-        Descubra Como Começar a Vender <span className="text-rosa-acolhedor">Cestas de Café da Manhã</span> e Presentes Mesmo Sem Experiência
+        Ganhe até <span className="text-rosa-acolhedor">R$ 1.000 por semana</span> vendendo cestas de café da manhã e presente — mesmo começando do zero
       </motion.h1>
       
       <motion.p 
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1 }}
-        className="text-marrom-suave/60 text-base md:text-lg font-medium max-w-2xl mx-auto mb-10"
+        className="text-marrom-suave/50 text-sm md:text-lg font-normal max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
       >
-        Mesmo que você nunca tenha vendido nada antes… não saiba quais itens colocar na cesta… ou tenha medo de investir e não vender.
+        Assista ao vídeo abaixo e descubra como o aplicativo mostra quais cestas montar, quanto cobrar e quanto você pode lucrar.
       </motion.p>
 
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="relative aspect-video max-w-2xl mx-auto bg-marrom-suave/5 rounded-2xl overflow-hidden border border-marrom-suave/10 group shadow-sm"
+        className="relative aspect-video max-w-3xl mx-auto bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-sm border border-marrom-suave/5 group"
       >
         <img 
           src="https://picsum.photos/seed/artisanal-basket/1280/720" 
           alt="Vídeo de Vendas" 
-          className="w-full h-full object-cover opacity-80 grayscale group-hover:grayscale-0 transition-all duration-700"
+          className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-14 h-14 bg-white text-marrom-suave rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
-            <Play className="fill-current w-5 h-5 ml-1" />
+          <div className="w-12 h-12 md:w-16 md:h-16 bg-white/90 backdrop-blur-md text-marrom-suave rounded-full flex items-center justify-center shadow-sm hover:scale-105 transition-transform cursor-pointer">
+            <Play className="fill-current w-5 h-5 md:w-6 md:h-6 ml-1" />
           </div>
         </div>
       </motion.div>
@@ -704,7 +704,6 @@ const FloatingScarcity = () => {
 export default function App() {
   return (
     <div className="min-h-screen bg-creme-claro font-sans antialiased selection:bg-rosa-acolhedor/20 selection:text-marrom-suave">
-      <Navbar />
       <Hero />
       <HowItWorks />
       <AppTechnology />
