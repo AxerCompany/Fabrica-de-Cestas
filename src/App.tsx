@@ -52,12 +52,12 @@ const Hero = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section className="pt-20 md:pt-32 pb-8 md:pb-10 bg-creme-claro">
+    <section className="pt-10 md:pt-14 pb-8 md:pb-10 bg-creme-claro">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-block bg-rosa-acolhedor/10 text-rosa-acolhedor px-6 py-2 rounded-2xl text-xs md:text-sm font-bold uppercase tracking-widest mb-6"
+          className="inline-block bg-rosa-acolhedor/10 text-rosa-acolhedor px-6 py-2 rounded-2xl text-xs md:text-sm font-bold uppercase tracking-widest mb-4"
         >
           OPORTUNIDADE ÚNICA DE<br />RENDA EXTRA
         </motion.div>
@@ -721,7 +721,7 @@ const FloatingScarcity = () => {
   const [name, setName] = useState("Mariana");
 
   useEffect(() => {
-    const names = ["Lucas", "Ana", "Pedro", "Carla", "Marcos", "Julia"];
+    const names = ["Mariana", "Ana Paula", "Carla", "Julia", "Renata", "Beatriz", "Fernanda", "Luciana", "Patrícia", "Camila", "Amanda", "Larissa"];
     const timer = setInterval(() => {
       setName(names[Math.floor(Math.random() * names.length)]);
       setShow(true);
