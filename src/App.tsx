@@ -57,7 +57,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-block bg-rosa-acolhedor/10 text-rosa-acolhedor px-6 py-2 rounded-2xl text-xs md:text-sm font-bold uppercase tracking-widest mb-4"
+          className="inline-block bg-rosa-acolhedor/10 text-rosa-acolhedor px-6 py-2 rounded-2xl text-[10px] md:text-xs font-bold uppercase tracking-widest mb-4"
         >
           OPORTUNIDADE ÚNICA DE<br />RENDA EXTRA
         </motion.div>
@@ -65,7 +65,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-3xl md:text-5xl font-bold leading-tight md:leading-[1.15] tracking-tight mb-6 md:mb-8 text-marrom-suave"
+          className="text-xl md:text-3xl font-bold leading-tight md:leading-[1.15] tracking-tight mb-6 md:mb-8 text-marrom-suave"
         >
           Ganhe até <span className="text-rosa-acolhedor">R$ 1.000 por semana</span> vendendo cestas de café da manhã e presente — mesmo começando do zero.
         </motion.h1>
@@ -74,7 +74,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-marrom-suave/80 text-sm md:text-lg font-bold max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
+          className="text-marrom-suave/80 text-xs md:text-base font-bold max-w-2xl mx-auto mb-10 md:mb-16 leading-relaxed"
         >
           Assista ao vídeo abaixo e descubra como o aplicativo mostra quais cestas montar, quanto cobrar e quanto você pode lucrar.
         </motion.p>
@@ -101,7 +101,7 @@ const Hero = () => {
                 <motion.div
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="bg-rosa-acolhedor text-white px-4 py-2 rounded-full text-sm font-bold shadow-md uppercase tracking-wider"
+                  className="bg-rosa-acolhedor text-white px-4 py-2 rounded-full text-xs font-bold shadow-md uppercase tracking-wider"
                 >
                   Clique para assistir
                 </motion.div>
