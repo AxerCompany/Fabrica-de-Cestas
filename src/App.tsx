@@ -65,7 +65,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-xl md:text-3xl font-bold leading-tight md:leading-[1.15] tracking-tight mb-6 md:mb-8 text-marrom-suave"
+          className="text-2xl md:text-4xl font-bold leading-tight md:leading-[1.15] tracking-tight mb-6 md:mb-8 text-marrom-suave"
         >
           Ganhe até <span className="text-rosa-acolhedor">R$ 1.000 por semana</span> vendendo cestas de café da manhã e presente — mesmo começando do zero.
         </motion.h1>
