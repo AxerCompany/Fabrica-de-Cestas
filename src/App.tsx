@@ -36,13 +36,26 @@ import { motion, AnimatePresence } from 'motion/react';
 
 // --- Artisanal Components ---
 
+const handleRedirect = (url: string) => {
+  const search = window.location.search;
+  if (search) {
+    const separator = url.includes('?') ? '&' : '?';
+    window.location.href = url + separator + search.substring(1);
+  } else {
+    window.location.href = url;
+  }
+};
+
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-creme-claro/80 backdrop-blur-sm border-b border-laranja-suave/20">
     <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <span className="font-black text-xl tracking-tight uppercase text-marrom-suave">Cesta<span className="text-rosa-acolhedor">Lucrativa</span></span>
       </div>
-      <button className="bg-marrom-suave text-white text-[10px] font-bold py-2 px-5 rounded-full hover:bg-marrom-suave/80 transition-colors uppercase tracking-wider">
+      <button 
+        onClick={() => handleRedirect('#')}
+        className="bg-marrom-suave text-white text-[10px] font-bold py-2 px-5 rounded-full hover:bg-marrom-suave/80 transition-colors uppercase tracking-wider"
+      >
         Acessar
       </button>
     </div>
@@ -650,7 +663,10 @@ const Pricing = () => {
             ))}
           </div>
 
-          <button className="w-full bg-rosa-acolhedor hover:bg-rosa-acolhedor/90 text-white font-black py-5 rounded-xl transition-all flex flex-col items-center justify-center gap-1 uppercase italic tracking-tight animate-pulse-subtle shadow-lg shadow-rosa-acolhedor/20">
+          <button 
+            onClick={() => handleRedirect('https://pay.kiwify.com.br/placeholder')}
+            className="w-full bg-rosa-acolhedor hover:bg-rosa-acolhedor/90 text-white font-black py-5 rounded-xl transition-all flex flex-col items-center justify-center gap-1 uppercase italic tracking-tight animate-pulse-subtle shadow-lg shadow-rosa-acolhedor/20"
+          >
             <span className="text-lg flex items-center gap-2"><ShoppingBag className="w-5 h-5" /> LIBERAR MEU ACESSO AGORA</span>
           </button>
           
@@ -716,8 +732,8 @@ const Footer = () => (
   <footer className="py-12 bg-creme-claro border-t border-marrom-suave/5">
     <div className="max-w-6xl mx-auto px-6 text-center text-[10px] text-marrom-suave/40 uppercase tracking-widest">
       <div className="flex justify-center gap-8 mb-6 font-bold">
-        <a href="#" className="hover:text-rosa-acolhedor transition-colors">Privacidade</a>
-        <a href="#" className="hover:text-rosa-acolhedor transition-colors">Termos</a>
+        <button onClick={() => handleRedirect('#')} className="hover:text-rosa-acolhedor transition-colors">Privacidade</button>
+        <button onClick={() => handleRedirect('#')} className="hover:text-rosa-acolhedor transition-colors">Termos</button>
       </div>
       <p className="mb-2">CNPJ: 00.000.000/0001-00</p>
       <p>© 2026 CestaLucrativa. Todos os direitos reservados.</p>
