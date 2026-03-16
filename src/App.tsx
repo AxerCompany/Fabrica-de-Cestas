@@ -26,6 +26,7 @@ import {
   DollarSign,
   Smartphone,
   Calculator,
+  Bot,
   Sparkles,
   ListChecks,
   MessageSquare,
@@ -265,6 +266,11 @@ const AppTechnology = () => {
               title: "TEXTOS PARA VENDER", 
               desc: "Copie e use mensagens prontas para divulgar suas cestas em todas as redes sociais.", 
               icon: MessageSquare 
+            },
+            { 
+              title: "ASSISTENTE DE CESTAS IA", 
+              desc: "Pergunte o que quiser sobre cestas. Receba ajuda sobre montagem, itens, preços e vendas sempre que precisar.", 
+              icon: Bot 
             },
             { 
               title: "PASSO A PASSO SIMPLES", 
