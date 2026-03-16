@@ -664,7 +664,7 @@ const Pricing = () => {
           </div>
 
           <button 
-            onClick={() => handleRedirect('https://pay.kiwify.com.br/placeholder')}
+            onClick={() => handleRedirect('https://pay.wiapy.com/qEj50axiGA')}
             className="w-full bg-rosa-acolhedor hover:bg-rosa-acolhedor/90 text-white font-black py-5 rounded-xl transition-all flex flex-col items-center justify-center gap-1 uppercase italic tracking-tight animate-pulse-subtle shadow-lg shadow-rosa-acolhedor/20"
           >
             <span className="text-lg flex items-center gap-2"><ShoppingBag className="w-5 h-5" /> LIBERAR MEU ACESSO AGORA</span>
