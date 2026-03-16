@@ -507,43 +507,46 @@ const WhatYouGet = () => (
         </div>
 
         {/* Bonus 2 */}
-        <div className="group relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-marrom-suave/5 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
-          <div className="flex flex-col items-center text-center gap-8">
-            <div className="flex-1 w-full">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <span className="bg-marrom-suave/5 text-marrom-suave/60 text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
-                  BÔNUS 02
-                </span>
-              </div>
-              
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight text-marrom-suave">
-                COMO COMEÇAR A VENDER<br />CESTAS DO ZERO
-              </h3>
-              
-              <p className="text-marrom-suave/70 text-sm md:text-base mb-8 leading-relaxed max-w-xl mx-auto">
-                Um guia simples para quem quer começar mesmo sem experiência, direto ao ponto.
-              </p>
+        <div className="group relative">
+          <div className="absolute -inset-1 bg-gradient-to-r from-rosa-acolhedor to-laranja-suave rounded-[2.5rem] blur opacity-10 group-hover:opacity-20 transition duration-1000 group-hover:duration-200" />
+          <div className="relative bg-white p-8 md:p-12 rounded-[2.5rem] border border-marrom-suave/5 shadow-xl group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-500">
+            <div className="flex flex-col items-center text-center gap-8">
+              <div className="flex-1 w-full">
+                <div className="flex items-center justify-center gap-3 mb-6">
+                  <span className="bg-rosa-acolhedor text-white text-[9px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
+                    BÔNUS 02
+                  </span>
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-bold mb-4 leading-tight text-marrom-suave">
+                  COMO COMEÇAR A VENDER<br />CESTAS AINDA ESTA SEMANA
+                </h3>
+                
+                <p className="text-marrom-suave/70 text-sm md:text-base mb-8 leading-relaxed max-w-xl mx-auto">
+                  Um guia direto para quem quer começar ainda essa semana no ramo das cestas
+                </p>
 
-              <div className="flex flex-col gap-4 mb-8 max-w-md mx-auto">
-                {[
-                  "Quantas cestas fazer no início",
-                  "Montagem da primeira cesta",
-                  "Onde comprar itens baratos",
-                  "Fotos bonitas com o celular",
-                  "Como evitar erros de iniciantes"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-marrom-suave/5 flex items-center justify-center shrink-0">
-                      <Check className="w-3 h-3 text-marrom-suave/40" />
+                <div className="flex flex-col gap-4 mb-8 max-w-md mx-auto">
+                  {[
+                    "Quais cestas montar primeiro",
+                    "Onde comprar itens baratos",
+                    "Como montar sua primeira cesta",
+                    "Como tirar fotos com o celular",
+                    "Como divulgar e conseguir pedidos"
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-rosa-acolhedor/10 flex items-center justify-center shrink-0">
+                        <Check className="w-3 h-3 text-rosa-acolhedor" />
+                      </div>
+                      <p className="text-marrom-suave/70 text-xs md:text-sm text-left">{item}</p>
                     </div>
-                    <p className="text-marrom-suave/70 text-xs md:text-sm text-left">{item}</p>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
 
-              <div className="inline-flex items-center gap-3 px-4 py-2 bg-creme-claro rounded-xl border border-marrom-suave/5">
-                <span className="text-marrom-suave/30 text-[10px] line-through uppercase tracking-widest">Valor: R$ 97,00</span>
-                <span className="text-rosa-acolhedor text-[10px] font-black uppercase tracking-widest">Hoje: Grátis</span>
+                <div className="inline-flex items-center gap-3 px-4 py-2 bg-creme-claro rounded-xl border border-marrom-suave/5">
+                  <span className="text-marrom-suave/30 text-[10px] line-through uppercase tracking-widest">Valor: R$ 97,00</span>
+                  <span className="text-rosa-acolhedor text-[10px] font-black uppercase tracking-widest">Hoje: Grátis</span>
+                </div>
               </div>
             </div>
           </div>
