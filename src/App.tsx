@@ -603,7 +603,7 @@ const Pricing = () => {
           <span className="text-[10px] font-black tracking-[0.3em] uppercase text-laranja-suave bg-white/5 px-4 py-2 rounded-full border border-white/10 inline-block mb-8">
             OFERTA EXCLUSIVA • VAGAS LIMITADAS
           </span>
-          <p className="text-laranja-suave text-xs font-bold tracking-widest uppercase">ACESSO TOTAL + MOLDES + BÔNUS</p>
+          <p className="text-laranja-suave text-xs font-bold tracking-widest uppercase">ACESSO TOTAL + BÔNUS</p>
         </div>
 
         <div className="group relative bg-white/5 border border-white/10 rounded-2xl p-8 mb-8 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-rosa-acolhedor/5">
@@ -676,11 +676,38 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-6 opacity-30 grayscale invert">
+        <div className="flex justify-center gap-6 opacity-30 grayscale invert mb-12">
           <Shield className="w-5 h-5" />
           <Lock className="w-5 h-5" />
           <CreditCard className="w-5 h-5" />
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-2xl mx-auto bg-white/5 border border-white/10 rounded-3xl p-8 md:p-10 backdrop-blur-sm"
+        >
+          <div className="flex flex-col md:flex-row items-center gap-8 text-left">
+            <div className="relative shrink-0">
+              <div className="w-24 h-24 md:w-32 md:h-32 bg-laranja-suave/20 rounded-full flex items-center justify-center border-2 border-laranja-suave/30">
+                <Shield className="w-12 h-12 md:w-16 md:h-16 text-laranja-suave" />
+              </div>
+              <div className="absolute -bottom-2 -right-2 bg-rosa-acolhedor text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">
+                7 DIAS
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 text-laranja-suave uppercase italic tracking-tight">
+                RISCO ZERO: GARANTIA INCONDICIONAL
+              </h3>
+              <p className="text-white/70 text-sm md:text-base leading-relaxed font-medium">
+                Fique tranquila! Você tem 7 dias para testar o aplicativo e todos os bônus. Se por qualquer motivo você não gostar ou achar que não é para você, basta nos enviar um e-mail e devolvemos 100% do seu dinheiro. Sem perguntas e sem letras miúdas. O seu sucesso é o nosso compromisso.
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
