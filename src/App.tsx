@@ -756,14 +756,26 @@ const FAQ = () => {
 };
 
 const Footer = () => (
-  <footer className="py-12 bg-creme-claro border-t border-marrom-suave/5">
-    <div className="max-w-6xl mx-auto px-6 text-center text-[10px] text-marrom-suave/40 uppercase tracking-widest">
-      <div className="flex justify-center gap-8 mb-6 font-bold">
+  <footer className="py-16 bg-creme-claro border-t border-marrom-suave/5">
+    <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="flex justify-center gap-8 mb-8 text-[10px] font-bold uppercase tracking-widest text-marrom-suave/40">
         <button onClick={() => handleRedirect('#')} className="hover:text-rosa-acolhedor transition-colors">Privacidade</button>
         <button onClick={() => handleRedirect('#')} className="hover:text-rosa-acolhedor transition-colors">Termos</button>
       </div>
-      <p className="mb-2">CNPJ: 00.000.000/0001-00</p>
-      <p>© 2026 CestaLucrativa. Todos os direitos reservados.</p>
+      
+      <div className="space-y-4 text-[10px] md:text-[11px] text-marrom-suave/50 leading-relaxed max-w-2xl mx-auto">
+        <p className="font-bold text-marrom-suave/70 uppercase tracking-tighter">
+          © 2026 AxerCompany • CNPJ: 65.887.998/0001-33 • Todos os direitos reservados.
+        </p>
+        
+        <p>
+          Todo o conteúdo presente nesta página, incluindo textos, imagens, design, estrutura, vídeos, materiais e quaisquer outros elementos, é protegido por leis de direitos autorais e propriedade intelectual.
+        </p>
+        
+        <p>
+          É proibida a reprodução, cópia, distribuição ou modificação, total ou parcial, sem autorização prévia por escrito do responsável. O uso indevido do conteúdo poderá resultar em medidas legais conforme a legislação vigente.
+        </p>
+      </div>
     </div>
   </footer>
 );
