@@ -14,7 +14,37 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '988893970368054');
+
+    function obterEmailUsuario() {
+      const campo =
+        document.querySelector('input[type="email"]') ||
+        document.querySelector('input[name*="email"]');
+
+      return campo?.value || "";
+    }
+
+    function obterTelefoneUsuario() {
+      const campo =
+        document.querySelector('input[type="tel"]') ||
+        document.querySelector('input[name*="telefone"]') ||
+        document.querySelector('input[name*="phone"]');
+
+      let telefone = campo?.value || "";
+
+      telefone = telefone.replace(/\D/g, '');
+
+      if (telefone && !telefone.startsWith('55')) {
+        telefone = '55' + telefone;
+      }
+
+      return telefone;
+    }
+
+    fbq('init', '988893970368054', {
+      em: obterEmailUsuario(),
+      ph: obterTelefoneUsuario()
+    });
+
     fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
