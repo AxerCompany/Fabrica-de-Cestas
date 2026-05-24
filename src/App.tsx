@@ -765,7 +765,7 @@ const Footer = () => (
       
       <div className="space-y-4 text-[10px] md:text-[11px] text-marrom-suave/50 leading-relaxed max-w-2xl mx-auto">
         <p className="font-bold text-marrom-suave/70 uppercase tracking-tighter">
-          © 2026 AxerCompany • CNPJ: 65.887.998/0001-33 • Todos os direitos reservados.
+          © 2026 AxerCompany • Todos os direitos reservados.
         </p>
         
         <p>
