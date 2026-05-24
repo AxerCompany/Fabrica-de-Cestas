@@ -30,7 +30,8 @@ import {
   Sparkles,
   ListChecks,
   MessageSquare,
-  CheckCircle
+  CheckCircle,
+  Calendar
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -239,6 +240,9 @@ const AppTechnology = () => {
             "https://i.postimg.cc/rpP9vryj/Whats-App-Image-2026-03-14-at-22-26-21_(2).webp",
             "https://i.postimg.cc/q75G93Bj/Whats-App-Image-2026-03-14-at-22-26-21_(3).webp",
             "https://i.postimg.cc/LsbVr14x/Whats-App-Image-2026-03-14-at-22-26-21_(4).webp",
+            "https://i.postimg.cc/pdxj8zMz/Whats-App-Image-2026-05-23-at-22-10-22-(1)-(1).webp",
+            "https://i.postimg.cc/HLHM5X1b/Whats-App-Image-2026-05-23-at-22-10-32.webp",
+            "https://i.postimg.cc/FKmSc3X1/Whats-App-Image-2026-05-23-at-22-10-39-(1)-(1).webp",
             "https://i.postimg.cc/XvzgTCNx/Whats-App-Image-2026-03-14-at-22-26-21_(5).webp",
             "https://i.postimg.cc/tgMzLxRz/Whats-App-Image-2026-03-14-at-22-26-21_(6).webp",
             "https://i.postimg.cc/vmNvpV8L/Whats-App-Image-2026-03-14-at-22-26-22_(3).webp",
@@ -274,6 +278,11 @@ const AppTechnology = () => {
               title: "CÁLCULO DE LUCRO", 
               desc: "Saiba quanto custa montar e quanto você pode ganhar tudo automático.", 
               icon: Calculator 
+            },
+            { 
+              title: "CALENDÁRIO DE DATAS", 
+              desc: "Saiba quais datas vendem mais e como se preparar para cada uma.", 
+              icon: Calendar 
             },
             { 
               title: "TEXTOS PARA VENDER", 
