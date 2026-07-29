@@ -647,8 +647,8 @@ const Pricing = () => {
             <p className="text-white/40 line-through text-lg mb-1">DE R$ 197,00</p>
             <div className="flex items-start justify-center gap-1">
               <span className="text-2xl font-black italic mt-2">R$</span>
-              <span className="text-7xl font-black italic tracking-tighter text-laranja-suave">37</span>
-              <span className="text-2xl font-black italic mt-2">,00</span>
+              <span className="text-7xl font-black italic tracking-tighter text-laranja-suave">29</span>
+              <span className="text-2xl font-black italic mt-2">,90</span>
             </div>
           </div>
 
